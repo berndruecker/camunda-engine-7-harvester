@@ -1,0 +1,15 @@
+language: java
+jdk:
+  - openjdk8
+  - openjdk9
+  - openjdk11
+
+script: mvn clean install
+
+cache:
+  directories:
+  - node_modules
+
+after_success:
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker build -t berndruecker/camunda-engine-harvester ./
