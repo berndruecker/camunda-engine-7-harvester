@@ -4,7 +4,7 @@ This is the code extracted from a simple POC to show how to gather information a
 
 There are different ways to gather that information. The one shown in this POC is that the harvester (this tool) has all Camunda endpoints configured (for the sake of simplicity of the POC, by a static configuration: [application.properties](blob/master/src/main/resources/application.properties#L5-15)). Then it can leverage the existing (Camunda REST API)[https://docs.camunda.org/manual/latest/reference/rest/] to gather information about [the version](https://docs.camunda.org/manual/latest/reference/rest/version/) and [some metrics](https://docs.camunda.org/manual/latest/reference/rest/metrics/):
 
-![Harvest](/harvest.png)
+![Harvest](/harvester.png)
 
 This POC contains a **Java Spring Boot backend** to
 
@@ -15,6 +15,8 @@ This POC contains a **Java Spring Boot backend** to
 It further contains a **Vue.js frontend** to
 
 * display the information.
+
+![Screenshot](/screenshot.png)
 
 There are a couple of extension points not considered in the POC:
 
