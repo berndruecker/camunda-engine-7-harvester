@@ -1,6 +1,10 @@
+[![Camunda Platform 7](https://img.shields.io/badge/Compatible%20with-Camunda%20Platform%207-26d07c)](https://img.shields.io/badge/Compatible%20with-Camunda%20Platform%207-26d07c)
+
 # Camunda Engine Harvester (POC)
 
-This is the code extracted from a simple POC to show how to gather information about multiple Camunda installations within an enterprise.
+This is the code extracted from a simple POC to show how to gather information about multiple Camunda 7 installations within an enterprise.
+
+Note, that this problem is solved out-of-the-box by the SaaS capabilities of Camunda 8.
 
 There are different ways to gather that information. The one shown in this POC is that the harvester (this tool) has all Camunda endpoints configured (for the sake of simplicity of the POC, by a static configuration: [application.properties](blob/master/src/main/resources/application.properties#L5-15)). Then it can leverage the existing (Camunda REST API)[https://docs.camunda.org/manual/latest/reference/rest/] to gather information about [the version](https://docs.camunda.org/manual/latest/reference/rest/version/) and [some metrics](https://docs.camunda.org/manual/latest/reference/rest/metrics/):
 
